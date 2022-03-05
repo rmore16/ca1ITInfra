@@ -123,5 +123,5 @@
         src: "./files/bundles_management.sql"
         dest: "/home/ec2-user/bundles_management.sql"
         mode: 0644
-    - name: Build database tables and insert values
-      shell: "mariadb user_inventory < /home/ec2-user/user_management.sql"
+    - name: Build database tables
+      shell: "mariadb bundles_inventory < /home/ec2-user/bundles_management.sql"
