@@ -53,8 +53,9 @@ $sql = "SELECT * FROM bundles";
 $var = mysqli_query($conn, $sql);
 $count = 1;
 
-if (mysqli_num_rows($var) > 4) {
-    while ($arr = mysqli_fetch_row($var)) {
+if (mysqli_num_rows($var) > 0) {
+    while ($count <= 3) {
+		$arr = mysqli_fetch_row($var);
         echo "<div class='card bg-dark' style='max-width: 100rem;'>
         <img src='I$count.jpeg' class='card-img'>
         <div class='card-img-overlay'>
